@@ -133,6 +133,8 @@
       this.$eventBus.$on('remove-record', () => {
         this._resetProgress()
       })
+
+      this.player.volume = 1;
     },
     computed: {
       audioSource () {
@@ -183,11 +185,11 @@
           this.player.currentTime = pos * this.player.duration
         }
       },
-      _onChangeVolume (val) {
-        if (val) {
-          this.player.volume = val
-        }
-      }
+      // _onChangeVolume (val) {
+      //   if (val) {
+      //     this.player.volume = val
+      //   }
+      // }
     }
   }
 </script>
