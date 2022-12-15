@@ -86,7 +86,6 @@
         :percentage="progress"
         @change-linehead="_onUpdateProgress"/>
       <div class="ar-player__time">{{duration}}</div>
-      <volume-control @change-volume="_onChangeVolume"/>
     </div>
 
     <audio :id="playerUniqId" :src="audioSource"></audio>
@@ -96,7 +95,7 @@
 <script>
   import IconButton    from './icon-button'
   import LineControl   from './line-control'
-  import VolumeControl from './volume-control'
+  // import VolumeControl from './volume-control'
   import { convertTimeMMSS } from '@/lib/utils'
 
   export default {
@@ -115,8 +114,7 @@
     },
     components: {
       IconButton,
-      LineControl,
-      VolumeControl
+      LineControl
     },
     mounted: function() {
       this.player = document.getElementById(this.playerUniqId)
