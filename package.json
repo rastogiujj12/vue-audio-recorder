@@ -5,11 +5,11 @@
   "author": "Gennady Grishkovtsov <grishkovelli@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --env.NODE_ENV=development --mode development --open --hot --https",
+    "dev": "webpack-dev-server --env.NODE_ENV=development --mode development --open --hot",
     "build": "webpack --env.NODE_ENV=production --mode production --progress --hide-modules"
   },
   "dependencies": {
-    "lamejs": "^1.2.0"
+    "lamejstmp": "^1.0.1"
   },
   "browserslist": [
     "> 1%",

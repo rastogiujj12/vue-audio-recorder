@@ -7,12 +7,9 @@
 
 <template>
   <div class="row">
-    <div class="toggle" @click="toggle">TOGGLE</div>
+    <!-- <div class="toggle" @click="toggle">TOGGLE</div> -->
 
     <audio-recorder v-if="showRecorder"
-      upload-url="some url"
-      filename="ninja"
-      format="wav"
       :attempts="3"
       :time="2"
       :headers="headers"
@@ -25,7 +22,7 @@
       :failed-upload="callback"
       :bit-rate="192"/>
 
-    <audio-player :src="mp3" v-if="!showRecorder"/>
+    <!-- <audio-player :src="mp3" v-if="!showRecorder"/> -->
   </div>
 </template>
 
