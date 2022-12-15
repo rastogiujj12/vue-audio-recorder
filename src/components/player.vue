@@ -17,7 +17,7 @@
       margin: 0 0 0 5px;
 
       & > .ar-player__progress {
-        width: 125px;
+        width: 215px;
       }
     }
 
@@ -184,12 +184,7 @@
         if (pos) {
           this.player.currentTime = pos * this.player.duration
         }
-      },
-      // _onChangeVolume (val) {
-      //   if (val) {
-      //     this.player.volume = val
-      //   }
-      // }
+      }
     }
   }
 </script>
