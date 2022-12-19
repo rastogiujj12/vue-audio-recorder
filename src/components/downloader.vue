@@ -3,11 +3,12 @@
 </style>
 
 <template>
-  <icon-button
+  <div class="ar__text" @click="download"> Click to download </div>
+  <!-- <icon-button
     id="download"
     class="ar-icon ar-icon__xs ar-icon--no-border"
     name="download"
-    @click.native="download"/>
+    @click.native="download"/> -->
 </template>
 
 <script>

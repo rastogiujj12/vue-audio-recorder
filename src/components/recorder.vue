@@ -17,13 +17,13 @@
     }
 
     &-records {
+      width:100%;
       height: 50px;
       padding-top: 1px;
       overflow-y: auto;
       margin-bottom: 20px;
 
       &__record {
-        width: 320px;
         height: 45px;
         padding: 0 10px;
         margin: 0 auto;
@@ -171,7 +171,9 @@
     }
 
     &__downloader {
-      right: 115px;
+      right: 30%;
+      cursor: pointer;
+      text-decoration: underline;
     }
 
     &__uploader {
@@ -207,9 +209,9 @@
           @click.native="stopRecorder"/>
       </div>
 
-      <div class="ar-recorder__records-limit" v-if="attempts">Attempts: {{attemptsLeft}}/{{attempts}}</div>
+      <!-- <div class="ar-recorder__records-limit" v-if="attempts">Attempts: {{attemptsLeft}}/{{attempts}}</div> -->
       <div class="ar-recorder__duration">{{recordedTime}}</div>
-      <div class="ar-recorder__time-limit" v-if="time">Record duration is limited: {{time}}m</div>
+      <div class="ar-recorder__time-limit" v-if="time">Max: {{time}} minues</div>
 
       <div class="ar-records">
         <div
@@ -223,13 +225,14 @@
               v-if="record.id === selected.id"
               @click="removeRecord(idx)">&times;</div>
             <div class="ar__text">Record {{idx + 1}}</div>
-            <div class="ar__text">{{record.duration}}</div>
-
             <downloader
               v-if="record.id === selected.id && showDownloadButton"
               class="ar__downloader"
               :record="record"
               :filename="filename"/>
+            <div class="ar__text">{{record.duration}}</div>
+
+            <!-- 
 
             <uploader
               v-if="record.id === selected.id && showUploadButton"
@@ -237,7 +240,7 @@
               :record="record"
               :filename="filename"
               :headers="headers"
-              :upload-url="uploadUrl"/>
+              :upload-url="uploadUrl"/> -->
         </div>
       </div>
 
@@ -329,6 +332,7 @@
 
         this.recorder.stop()
         this.recordList = this.recorder.recordList()
+        this.choiceRecord(this.recordList[0]);
       },
       removeRecord (idx) {
         this.recordList.splice(idx, 1)
