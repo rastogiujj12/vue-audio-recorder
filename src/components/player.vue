@@ -15,6 +15,7 @@
       border: 1px solid #E8E8E8;
       border-radius: 24px;
       margin: 0 0 0 5px;
+      width: calc(100% - 55px);
     }
 
     &-bar {
@@ -30,6 +31,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+      flex: 1;
     }
 
     &__progress {
