@@ -1,6 +1,7 @@
 <style lang="scss">
   .ar {
-    width: 420px;
+    width:100%;
+    max-width: 420px;
     font-family: 'Roboto', sans-serif;
     border-radius: 16px;
     background-color: #FAFAFA;
@@ -16,7 +17,7 @@
     }
 
     &-records {
-      height: 138px;
+      height: 50px;
       padding-top: 1px;
       overflow-y: auto;
       margin-bottom: 20px;

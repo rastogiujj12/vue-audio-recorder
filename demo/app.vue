@@ -6,7 +6,7 @@
 </style>
 
 <template>
-  <div class="row">
+  <!-- <div class="row"> -->
     <!-- <div class="toggle" @click="toggle">TOGGLE</div> -->
 
     <audio-recorder v-if="showRecorder"
@@ -23,7 +23,7 @@
       :bit-rate="192"/>
 
     <!-- <audio-player :src="mp3" v-if="!showRecorder"/> -->
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>

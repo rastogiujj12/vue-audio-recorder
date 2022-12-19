@@ -1,6 +1,6 @@
 <style lang="scss">
   .ar-player {
-    width: 380px;
+    width: 100%;
     height: unset;
     border: 0;
     border-radius: 0;
@@ -15,10 +15,6 @@
       border: 1px solid #E8E8E8;
       border-radius: 24px;
       margin: 0 0 0 5px;
-
-      & > .ar-player__progress {
-        width: 215px;
-      }
     }
 
     &-bar {
@@ -44,7 +40,6 @@
     &__time {
       color: rgba(84,84,84,0.5);
       font-size: 16px;
-      width: 41px;
     }
 
     &__play {
