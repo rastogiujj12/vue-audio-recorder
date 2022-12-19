@@ -38,7 +38,8 @@
           border-radius: 24px;
           background-color: #FFFFFF;
           margin-top: -1px;
-          padding: 0 34px;
+          padding: 0 15px;
+          display:flex;
         }
       }
     }
@@ -150,30 +151,15 @@
 
     &__rm {
       cursor: pointer;
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      padding: 6px;
-      line-height: 6px;
-      margin: auto;
-      left: 10px;
-      bottom: 0;
-      top: 0;
       color: rgb(244, 120, 90);
-    }
-
-    &__downloader,
-    &__uploader {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
+      font-size: 16px;
+      text-decoration: underline;
     }
 
     &__downloader {
-      right: 30%;
       cursor: pointer;
       text-decoration: underline;
+      color: #5cdb5c;
     }
 
     &__uploader {
@@ -211,7 +197,7 @@
 
       <!-- <div class="ar-recorder__records-limit" v-if="attempts">Attempts: {{attemptsLeft}}/{{attempts}}</div> -->
       <div class="ar-recorder__duration">{{recordedTime}}</div>
-      <div class="ar-recorder__time-limit" v-if="time">Max: {{time}} minues</div>
+      <div class="ar-recorder__time-limit" v-if="time">Max: {{time}} minutes</div>
 
       <div class="ar-records">
         <div
@@ -223,8 +209,7 @@
             <div
               class="ar__rm"
               v-if="record.id === selected.id"
-              @click="removeRecord(idx)">&times;</div>
-            <div class="ar__text">Record {{idx + 1}}</div>
+              @click="removeRecord(idx)">Delete</div>
             <downloader
               v-if="record.id === selected.id && showDownloadButton"
               class="ar__downloader"

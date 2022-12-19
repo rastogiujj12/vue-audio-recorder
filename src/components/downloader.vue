@@ -3,7 +3,7 @@
 </style>
 
 <template>
-  <div class="ar__text" @click="download"> Click to download </div>
+  <div class="ar__text" @click="download"> Download </div>
   <!-- <icon-button
     id="download"
     class="ar-icon ar-icon__xs ar-icon--no-border"
